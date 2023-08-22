@@ -34,6 +34,7 @@ button:active{
 /*Header and navigation CSS*/
 .navbar{
     padding-left: 5%;
+    margin-right: 5%;
 }
 
 .navbar-content{
@@ -62,23 +63,6 @@ button:active{
 .navbar .navbar-nav .nav-item{
     position: relative;
   }
-
-.navbar .navbar-nav .nav-item::after{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: rgb(27, 91, 49);
-  width: 0%;
-  content: "";
-  height: 1px;
-  transition: all 0.5s;
-}
-
-.navbar .navbar-nav .nav-item:hover::after {
-  width: 80%;
-}
 
 form.search{
     position: relative;
@@ -730,7 +714,7 @@ footer .made-by .logo{
     }
 
     .section-left{
-        width: 100%;
+        width: 95%;
         min-height: 300px;
         position: relative;
     }
@@ -786,7 +770,7 @@ footer .made-by .logo{
     }
 
     .ofert{
-        margin-right: 0;
+        margin-right: 5%;
     }
 
     .section-title-container{
@@ -832,8 +816,6 @@ footer .made-by .logo{
     .about{
         position: relative;
         height: 105vh;
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .about-section-left{
@@ -849,11 +831,12 @@ footer .made-by .logo{
     }
 
     .about-section-right{
-        width: 100%;
+        width: 95%;
+        margin-left: 5%;
         height: 65vh;
         position: absolute;
         top: 40vh;
-        padding: 3%;
+        padding: 5%;
         background-color: rgb(27, 91, 49);
         color: rgb(255, 255, 255);
         overflow-y: scroll;
@@ -1036,6 +1019,10 @@ footer .made-by .logo{
         height: 15px;
     }
 
+    .section-title-container{
+        padding: 5%;
+    }
+
     .ofert h1{
         font-size: 40px;
         margin-bottom: 4%;
@@ -1074,8 +1061,6 @@ footer .made-by .logo{
 
     .about{
         height: 120vh;
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .about-section-left{
@@ -1091,7 +1076,8 @@ footer .made-by .logo{
     }
 
     .about-section-right{
-        width: 100%;
+        width: 95%;
+        margin-left: 5%;
         height: 80vh;
         position: absolute;
         top: 40vh;
@@ -1320,6 +1306,23 @@ footer .made-by .logo{
         background-color: rgb(245, 240, 236);
         padding: 30px;
     }
+
+    .navbar .navbar-nav .nav-item::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgb(27, 91, 49);
+        width: 0%;
+        content: "";
+        height: 1px;
+        transition: all 0.5s;
+      }
+
+      .navbar .navbar-nav .nav-item:hover::after {
+        width: 80%;
+      }
 
     .section-left{
         height: 600px;
