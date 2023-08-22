@@ -1,15 +1,10 @@
 :root{
     --pseudo-height: 100%;
-    --pseudo-display: block;
     }
 
     #Realizacje::after{
      height: var(--pseudo-height);
     }
-
-    #Realizacje button::after{
-        display: var(--pseudo-display);
-       }
 
 *{
     padding: 0;
@@ -491,12 +486,9 @@ form.search{
     bottom: 3%;
     left: calc(50% - 65px);
     background-color: transparent;
-    border: none;
-    z-index: 99999;
-}
-
-.realizations button::after{
-    content: "Rozwiń";
+    /* border: none; */
+    /* z-index: 99999; */
+    /* content: "Rozwiń"; */
     position: absolute;
     text-align: left;
     width: 130px;
@@ -1126,7 +1118,7 @@ footer .made-by .logo{
     }
 
     .photo-gallery{
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .about p:last-of-type{
@@ -1214,7 +1206,6 @@ footer .made-by .logo{
 
     .intro-arrow{
         width: 25%;
-        /* padding: 4% 5%; */
     }
 
     .arrow-left, .arrow-right{
@@ -1230,10 +1221,6 @@ footer .made-by .logo{
     .ofert span{
         font-size: 48px;
         margin-bottom: 4%;
-    }
-
-    .photo-gallery{
-        flex-direction: row;
     }
 
     .card{

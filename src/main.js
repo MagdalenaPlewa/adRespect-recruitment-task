@@ -68,7 +68,7 @@ function onClick(){
     showBtn.addEventListener("click", () => {
         realizationsGallery.classList.remove("realizations-hidden")
         root.style.setProperty("--pseudo-height", '0');
-        root.style.setProperty("--pseudo-display", 'none');
+        showBtn.style.display = "none"
     })
 
     imgCard.forEach(img => {
