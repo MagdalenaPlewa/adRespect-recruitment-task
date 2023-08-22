@@ -16,7 +16,7 @@
 
 body{
     background-color: rgb(255, 255, 255);
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
 
 button:active{
@@ -25,6 +25,10 @@ button:active{
     -moz-transform: translateY(3px);
     -ms-transform: translateY(3px);
     -o-transform: translateY(3px);
+}
+
+header, section, footer{
+    margin-left: 5%;
 }
 
 /*Header and navigation CSS*/
@@ -53,6 +57,8 @@ button:active{
 .navbar-toggler, .navbar-toggler:focus {
     border: none;
     box-shadow: none;
+    padding: 0;
+    margin-right: 5%;
 }
 
 .navbar .navbar-nav .nav-item{
@@ -465,13 +471,10 @@ form.search{
     bottom: 3%;
     left: calc(50% - 65px);
     background-color: transparent;
-    /* border: none; */
-    /* z-index: 99999; */
-    /* content: "Rozwiń"; */
     position: absolute;
     text-align: left;
     width: 130px;
-    bottom: 3%;
+    bottom: 7%;
     left: calc(50% - 65px);
     background: url("img/arrow-down.png") no-repeat right;
     background-position: 80% 45%;
@@ -493,13 +496,14 @@ form.search{
 
 .realizations-hidden{
     overflow: hidden;
-    height: 400px;
+    height: 500px;
 }
 
 /*Contact CSS section*/
 .contact{
     margin-right: 5%;
     padding: 5%  13% 5% 13%;
+    background-color: rgb(245, 240, 236)
 }
 
 .contact .container-fluid{
@@ -683,7 +687,7 @@ footer .made-by .logo{
         justify-content: left;
         align-items: left;
         position: absolute;
-        right: 0px;
+        right: 5%;
         top: 70px;
     }
 
@@ -733,7 +737,7 @@ footer .made-by .logo{
     }
 
     .intro-arrow{
-        right: 0;
+        right: 5%;
         width: 22%;
         height: 15%;
     }
@@ -826,8 +830,8 @@ footer .made-by .logo{
     }
 
     .about-section-right{
-        width: 95%;
-        margin-left: 5%;
+        width: 90%;
+        margin-left: 10%;
         height: 65vh;
         position: absolute;
         top: 40vh;
@@ -932,7 +936,7 @@ footer .made-by .logo{
         justify-content: left;
         align-items: left;
         position: absolute;
-        right: 0;
+        right: 5%;
         top: 70px;
     }
 
@@ -1071,8 +1075,8 @@ footer .made-by .logo{
     }
 
     .about-section-right{
-        width: 95%;
-        margin-left: 5%;
+        width: 90%;
+        margin-left: 10%;
         height: 80vh;
         position: absolute;
         top: 40vh;
@@ -1270,7 +1274,6 @@ footer .made-by .logo{
 
   @media(min-width: 992px){
     .navbar-content{
-        min-width: 600px;
         height: 70px;
         z-index: 9999;
         display: flex;
