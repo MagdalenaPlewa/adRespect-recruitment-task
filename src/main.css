@@ -1,0 +1,1329 @@
+:root{
+    --pseudo-height: 100%;
+    --pseudo-display: block;
+    }
+
+    #Realizacje::after{
+     height: var(--pseudo-height);
+    }
+
+    #Realizacje button::after{
+        display: var(--pseudo-display);
+       }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif; */
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin-left: 5%;
+}
+
+button:active{
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+}
+
+.main-container{
+    max-width: 1920px;
+}
+
+/*Header and navigation CSS*/
+.navbar{
+    padding-left: 5%;
+}
+
+.navbar-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 80%;
+
+}
+
+.navbar-content a{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.navbar-nav .nav-link.show{
+    color: rgb(27, 91, 49);
+    font-weight: bold;
+}
+
+.navbar-toggler, .navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-item{
+    position: relative;
+  }
+
+.navbar .navbar-nav .nav-item::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgb(27, 91, 49);
+  width: 0%;
+  content: "";
+  height: 1px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 80%;
+}
+
+form.search{
+    position: relative;
+}
+
+.search-input{
+    margin-left: 10px;
+}
+
+.bi-search{
+    transform: translateY(75%);
+    margin-bottom: 20px;
+    height: 14px;
+    -webkit-transform: translateY(75%);
+    -moz-transform: translateY(75%);
+    -ms-transform: translateY(75%);
+    -o-transform: translateY(75%);
+    cursor: pointer;
+}
+
+.bi-arrow-right-short{
+    position: absolute;
+    font-size: 16px;
+    right: 10px;
+    top: 15%;
+    display: none;
+    cursor: pointer;
+}
+
+/*Intro section CSS*/
+.section-left{
+    background-color: rgb(220, 193, 171);
+    padding: 5% 7% 5% 5%;
+}
+
+.section-left h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 6%;
+}
+
+.section-left p{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.intro-btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+.section-left button{
+    font-size: 16px;
+    padding: 2% 5% 3% 5%;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+.section-left button:first-child{
+    background-color: rgb(27, 91, 49);
+    color: rgb(255, 255, 255);
+    margin-bottom: 4%;
+}
+
+.section-left button:last-child{
+    background-color: transparent;
+    color: rgb(27, 91, 49);
+    border: 1px solid rgb(27, 91, 49);
+    margin-bottom: 4%;
+}
+
+.section-left .arrow-down{
+    height: 16px;
+}
+
+.intro-arrow{
+    position: absolute;
+    right: 11%;
+    bottom: 0;
+    width: 22%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(245, 240, 236);
+    align-items: center;
+    z-index: 9999;
+}
+
+.section-right{
+    position: relative;
+}
+
+.arrow-left-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-right-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-left-container:hover, .arrow-right-container:hover{
+    cursor: pointer;
+}
+
+.arrow-left, .arrow-right{
+    width: 15px;
+    height: 15px;
+}
+
+/*Ofetra section CSS*/
+.ofert{
+    margin-right: 5%;
+    padding-bottom: 10%;
+    background-color: rgb(245, 240, 236);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.section-title-container{
+    padding: 8% 1% 5% 10%;
+}
+
+.section-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgb(27, 91, 49);
+}
+
+.ofert h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 4%;
+}
+
+.ofert span{
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+
+.card{
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 378px;
+    height: 370px;
+    padding: 7% 6%;
+    text-align: left;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: rgba(84, 84, 84, 0.25);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.card:hover > .card-body a, .card:hover > .card-link-arrow{
+    bottom: calc(50% - 8px);
+}
+
+.card:hover > .card-body .card-img-top, .card:hover > .card-body p, .card:hover > .card-body h5{
+    opacity: 0.2;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.card-img-top{
+    height: 40px;
+    width: auto;
+    margin-bottom: 5%;
+}
+
+.card h5{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+
+.card-link{
+    position: absolute;
+    bottom: 48px;
+    color: rgb(27, 91, 49);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgb(27, 91, 49);
+    text-decoration: none;
+}
+
+.card-link-arrow{
+    height: 16px;
+    width: 16px;
+    margin-left: 10px;
+}
+
+/*O Firmie section CSS*/
+.about{
+    position: relative;
+    display: flex;
+    margin-left: -5%;
+    margin-right: 5%;
+}
+
+.about h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 4%;
+}
+
+.about span{
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+
+.about p:last-of-type{
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    font-size: 16px;
+}
+
+.about-section-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+}
+
+.about button{
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+    font-size: 16px;
+    padding: 2% 5% 3% 5%;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+.about-arrow-right{
+    height: 16px;
+    width: 16px;
+    margin-left: 8px;
+}
+
+/*Realization section CSS*/
+.realizations{
+    background-color: rgb(220, 193, 171);
+    margin-right: 5%;
+    padding: 0 0 5% 0;
+    position: relative;
+}
+
+.realizations::after{
+    content: "";
+    position: absolute;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.0) 0%, rgba(250,250,252,0.25) 50%, rgba(220,193,171,1) 100%);
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.realizations-section-title{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: rgb(27, 91, 49);
+    padding-top: 8%;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.realizations h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    margin-bottom: 4%;
+    padding-left: 8%;
+}
+
+.realizations span{
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 4%;
+}
+
+.photo-gallery{
+    display: flex;
+    gap: 20px
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo-gallery .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-gallery .img img:hover{
+    cursor: pointer;
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img{
+    max-width: 85%;
+    max-height: 85%;
+}
+
+.bi-x-square, .bi-arrow-left-square, .bi-arrow-right-square{
+    color: rgb(255,255,255);
+    font-size: 35px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.bi-x-square:hover, .bi-arrow-left-square:hover, .bi-arrow-right-square:hover{
+    cursor: pointer;
+}
+
+.bi-arrow-left-square{
+    position: absolute;
+    top: calc(50vh - 18px);
+    left: 10%;
+}
+
+.bi-arrow-right-square{
+    position: absolute;
+    top: calc(50vh - 18px);
+    right: 10%;
+}
+
+.realizations button{
+    position: absolute;
+    text-align: left;
+    width: 130px;
+    height: 58px;
+    bottom: 3%;
+    left: calc(50% - 65px);
+    background-color: transparent;
+    border: none;
+    z-index: 99999;
+}
+
+.realizations button::after{
+    content: "Rozwiń";
+    position: absolute;
+    text-align: left;
+    width: 130px;
+    bottom: 3%;
+    left: calc(50% - 65px);
+    background: url("img/arrow-down.png") no-repeat right;
+    background-position: 80% 45%;
+    background-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    margin-top: 10%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;;
+    padding: 12px 22px 14px 22px;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+    z-index: 9999;
+}
+
+.realizations-hidden{
+    overflow: hidden;
+    height: 400px;
+}
+
+/*Contact CSS section*/
+.contact{
+    margin-right: 5%;
+    padding: 5%  13% 5% 13%;
+}
+
+.contact .container-fluid{
+    background-color: rgb(27, 91, 49);
+    color: rgb(255,255,255);
+    padding: 0 6% 0 6%;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.col-left{
+
+    text-align: left;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    padding: 8% 0 0 0;
+}
+
+.col-left span{
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.col-right{
+    font-size: 16px;
+    text-align: left;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    padding-right: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col-right button{
+    width: 130px;
+    background-color: rgb(255,255,255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(27, 91, 49);
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;;
+    padding: 12px 22px 14px 22px;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+footer{
+    background-color: rgb(17, 17, 17);
+    color: rgb(255,255,255);
+    margin-right: 5%;
+    padding: 5%  13% 5% 13%;
+}
+
+footer .row-top{
+    padding: 0 0 5% 0;
+    border-bottom: 2px solid rgb(255,255,255);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .logo{
+    height: 16px;
+    margin-top: 12px;
+}
+
+footer .row-top-left{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+footer .row-top-left p{
+    margin-top: 12px;
+}
+
+footer .row-nav{
+    width: 100%;
+}
+
+footer .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+footer .nav-list{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .nav-list ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(255,255,255);
+}
+
+footer .nav-mail{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .row-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5%;
+}
+
+footer .made-by{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .made-by .logo{
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+.footer-btn{
+    margin-left: 5%;
+    min-width: 230px;
+    height: 50px;
+    background-color: rgb(27, 91, 49);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    padding: 12px 22px 14px 22px;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+}
+
+@media(max-width: 576px) {
+    .navbar{
+        height: 70px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        display: flex;
+    }
+
+    .logo{
+        height: 16px;
+    }
+
+    .navbar-content{
+        z-index: 9999;
+        background-color: rgb(245, 240, 236);
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        position: absolute;
+        right: 0px;
+        top: 70px;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding: 20px;
+    }
+
+    .dropdown-menu{
+        border: none;
+        background-color: transparent;
+    }
+
+    .dropdown-item{
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+    }
+
+  .hidden{
+        display: none;
+    }
+
+    .section-left{
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+    }
+
+    .section-right{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: absolute;
+
+    }
+
+    .intro-img img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    .intro-arrow{
+        right: 0;
+        width: 22%;
+        height: 15%;
+    }
+
+    .arrow-left-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .arrow-right-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-left button{
+        font-size: 14px;
+        padding: 2% 5% 3% 5%;
+        border-radius: 200px;
+        -webkit-border-radius: 200px;
+        -moz-border-radius: 200px;
+        -ms-border-radius: 200px;
+        -o-border-radius: 200px;
+    }
+
+    .ofert{
+        margin-right: 0;
+    }
+
+    .section-title-container{
+        padding: 5%;
+    }
+
+    .ofert h1{
+        font-size: 36px;
+        margin-bottom: 4%;
+    }
+
+    .ofert span{
+        font-size: 36px;
+        margin-bottom: 4%;
+    }
+
+    .card{
+        max-width: 278px;
+        height: 270px;
+        padding: 4% 3%;
+    }
+
+    .card-img-top{
+        height: 28px;
+        width: auto;
+        margin-bottom: 2%;
+    }
+
+    .card h5{
+        font-size: 22px;
+    }
+
+    .card-link{
+        font-size: 14px;
+    }
+
+    .card-link-arrow{
+        height: 14px;
+        width: 14px;
+        margin-left: 10px;
+    }
+
+    .about{
+        position: relative;
+        height: 105vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about-section-left{
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: absolute;
+        background:  url('img/about-photo.png')top left  no-repeat;
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .about-section-right{
+        width: 100%;
+        height: 65vh;
+        position: absolute;
+        top: 40vh;
+        padding: 3%;
+        background-color: rgb(27, 91, 49);
+        color: rgb(255, 255, 255);
+        overflow-y: scroll;
+    }
+
+    .about h1{
+        font-size: 36px;
+    }
+
+    .about span{
+        font-size: 36px;
+    }
+
+    .about p:last-of-type{
+        text-align: justify;
+        font-size: 12px;
+    }
+
+    .realizations h1{
+        font-size: 36px;
+    }
+
+    .realizations span{
+        font-size: 36px;
+    }
+
+    .photo-gallery{
+        flex-direction: column;
+    }
+
+    .contact{
+        padding: 0;
+    }
+
+    .contact .container-fluid{
+        padding: 0 7% 0 7%;
+        font-size: 36px;
+        font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+@media(min-width: 576px) {
+    .navbar{
+        height: 70px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+    }
+
+    .navbar-content{
+        z-index: 9999;
+        background-color: rgb(245, 240, 236);
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        position: absolute;
+        right: 0;
+        top: 70px;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding: 20px;
+    }
+
+    .dropdown-menu{
+        border: none;
+        background-color: transparent;
+    }
+
+    .dropdown-item{
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+    }
+
+    input.hidden, button.hidden{
+        display: none;
+    }
+
+    .search{
+        width: 100%;
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo{
+        height: 21px;
+    }
+
+    .intro{
+        display: flex;
+        position: relative;
+    }
+
+    .section-left{
+        width: 55%;
+        height: 450px;
+        padding-right: 7%;
+    }
+
+    .section-left h1{
+        font-size: 24px;
+    }
+
+    .section-left p{
+        font-size: 12px;
+    }
+
+    .section-right{
+        width: 45%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .intro-img img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+
+    .intro-arrow{
+        width: 30%;
+    }
+
+    .arrow-left, .arrow-right{
+        width: 15px;
+        height: 15px;
+    }
+
+    .ofert h1{
+        font-size: 40px;
+        margin-bottom: 4%;
+    }
+
+    .ofert span{
+        font-size: 40px;
+        margin-bottom: 4%;
+    }
+
+    .card{
+        max-width: 278px;
+        height: 270px;
+        padding: 4% 3%;
+    }
+
+    .card-img-top{
+        height: 28px;
+        width: auto;
+        margin-bottom: 2%;
+    }
+
+    .card h5{
+        font-size: 22px;
+    }
+
+    .card-link{
+        font-size: 14px;
+    }
+
+    .card-link-arrow{
+        height: 14px;
+        width: 14px;
+        margin-left: 10px;
+    }
+
+    .about{
+        height: 120vh;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about-section-left{
+        width: 100%;
+        height: 40vh;
+        overflow: hidden;
+        position: absolute;
+        background:  url('img/about-photo.png')top left  no-repeat;
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .about-section-right{
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        top: 40vh;
+        padding: 5%;
+        background-color: rgb(27, 91, 49);
+        color: rgb(255, 255, 255);
+        overflow-y: scroll;
+    }
+
+    .about h1{
+        font-size: 36px;
+    }
+
+    .about span{
+        font-size: 36px;
+    }
+
+    .realizations h1{
+        font-size: 40px;
+    }
+
+    .realizations span{
+        font-size: 40px;
+    }
+
+    .photo-gallery{
+        flex-direction: column;
+    }
+
+    .about p:last-of-type{
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    .contact .container-fluid{
+        padding: 0 7% 0 7%;
+        font-size: 36px;
+        font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  @media(min-width: 768px) {
+    .section-left{
+        height: 550px;
+    }
+
+    .section-right{
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .section-right{
+        width: 45%;
+        height: 550px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .intro-img img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+
+    .section-left h1{
+        margin-top: 5%;
+        font-size: 36px;
+    }
+
+    .section-left p{
+        font-size: 14px;
+    }
+
+    .intro-btn{
+        padding-top: 2%;
+    }
+
+    .intro-arrow{
+        width: 25%;
+        /* padding: 4% 5%; */
+    }
+
+    .arrow-left, .arrow-right{
+        width: 18px;
+        height: 18px;
+    }
+
+    .ofert h1{
+        font-size: 48px;
+        margin-bottom: 4%;
+    }
+
+    .ofert span{
+        font-size: 48px;
+        margin-bottom: 4%;
+    }
+
+    .photo-gallery{
+        flex-direction: row;
+    }
+
+    .card{
+        max-width: 378px;
+        height: 370px;
+        padding: 7% 6%;
+    }
+
+    .card-img-top{
+        height: 40px;
+        width: auto;
+        margin-bottom: 5%;
+    }
+
+    .card h5{
+        font-size: 28px;
+    }
+
+    .card-link{
+        font-size: 16px;
+    }
+
+    .card-link-arrow{
+        height: 14px;
+        width: 14px;
+        margin-left: 10px;
+    }
+
+    .about{
+        margin-left: -5%;
+        margin-right: 5%;
+        height: 650px;
+    }
+
+    .about-section-left{
+        width: 50%;
+        height: 100%;
+    }
+
+    .about-section-right{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+
+    .about h1{
+        font-size: 48px;
+    }
+
+    .about span{
+        font-size: 48px;
+    }
+
+    .about p:last-of-type{
+        text-align: justify;
+        font-size: 16px;
+    }
+  }
+
+  @media(min-width: 992px){
+    .navbar-content{
+        min-width: 600px;
+        height: 70px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background-color: transparent;
+    }
+
+    .navbar-nav{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        padding: 0;
+    }
+
+    .navbar-nav li{
+        min-width: 75px;
+    }
+
+    .search{
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+
+    .dropdown-menu{
+        background-color: rgb(245, 240, 236);
+        padding: 30px;
+    }
+
+    .section-left{
+        height: 600px;
+    }
+
+    .section-right{
+        height: 600px;
+    }
+
+    .section-left h1{
+        margin-top: 5%;
+        font-size: 42px;
+    }
+
+    .section-left p{
+        font-size: 14px;
+    }
+
+    .intro-btn{
+        padding-top: 5%;
+    }
+
+    .about{
+        height: 720px;
+
+    }
+
+    .about-section-left{
+        height: 720px;
+    }
+
+    .about-section-right{
+        height: 720px;
+        padding: 10% 8% 10% 12%;
+        overflow-y: hidden;
+    }
+
+    .about p:last-of-type{
+        text-align: left;
+        font-size: 16px;
+    }
+
+
+  }
+
+  @media(min-width: 1200px){
+    .section-left{
+        height: 620px;
+        padding-right: 13%;
+    }
+
+    .section-right{
+        height: 620px;
+    }
+
+    .section-left h1{
+        margin-top: 9%;
+        font-size: 50px;
+    }
+
+    .section-left p{
+        font-size: 16px;
+        text-align: left;
+    }
+  }
+
+.section-right{
+    position: relative;
+}
+
+
