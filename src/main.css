@@ -1,15 +1,10 @@
 :root{
     --pseudo-height: 100%;
-    --pseudo-display: block;
     }
 
     #Realizacje::after{
      height: var(--pseudo-height);
     }
-
-    #Realizacje button::after{
-        display: var(--pseudo-display);
-       }
 
 *{
     padding: 0;
@@ -491,12 +486,9 @@ form.search{
     bottom: 3%;
     left: calc(50% - 65px);
     background-color: transparent;
-    border: none;
-    z-index: 99999;
-}
-
-.realizations button::after{
-    content: "Rozwiń";
+    /* border: none; */
+    /* z-index: 99999; */
+    /* content: "Rozwiń"; */
     position: absolute;
     text-align: left;
     width: 130px;
@@ -540,11 +532,12 @@ form.search{
 }
 
 .col-left{
-
     text-align: left;
     margin-top: 8%;
     margin-bottom: 8%;
-    padding: 8% 0 0 0;
+    padding-top: 2%;
+    padding-left: 6%;
+    position: relative;
 }
 
 .col-left span{
@@ -558,7 +551,7 @@ form.search{
     text-align: left;
     margin-top: 8%;
     margin-bottom: 8%;
-    padding-right: 8%;
+    padding-right: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -630,6 +623,7 @@ footer .nav-list{
     display: flex;
     justify-content: space-between;
 }
+
 footer .nav-list ul{
     width: 100%;
     display: flex;
@@ -648,7 +642,7 @@ footer a{
 }
 
 footer .nav-mail{
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
 }
@@ -731,7 +725,7 @@ footer .made-by .logo{
         font-size: 14px;
     }
 
-  .hidden{
+    .hidden{
         display: none;
     }
 
@@ -772,7 +766,7 @@ footer .made-by .logo{
         justify-content: center;
         align-items: center;
     }
-    
+
     .arrow-right-container{
         width: 100%;
         height: 100%;
@@ -898,6 +892,50 @@ footer .made-by .logo{
         padding: 0 7% 0 7%;
         font-size: 36px;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    footer .row-top{
+        flex-direction: column;
+    }
+
+    footer .logo{
+        width: 95px;
+    }
+
+    footer .row-top-left{
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .footer-btn{
+        margin-left: 0;
+    }
+
+    footer .row-top-left p{
+        text-align: right;
+    }
+
+    footer .nav-list ul{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .nav{
+        flex-direction: column;
+    }
+
+    footer .nav-mail{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    footer .row-bottom{
+        flex-direction: column;
+        align-items: flex-start;
     }
   }
 
@@ -1080,7 +1118,7 @@ footer .made-by .logo{
     }
 
     .photo-gallery{
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .about p:last-of-type{
@@ -1092,6 +1130,32 @@ footer .made-by .logo{
         padding: 0 7% 0 7%;
         font-size: 36px;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    footer .nav-list ul{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer .row-top-left{
+        margin-top: 0%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    footer .row-top-left p{
+        text-align: right;
+    }
+
+    footer .nav-mail{
+        width: 35%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    footer .row-bottom{
+        flex-direction: row;
+        align-items: flex-start;
     }
   }
 
@@ -1142,7 +1206,6 @@ footer .made-by .logo{
 
     .intro-arrow{
         width: 25%;
-        /* padding: 4% 5%; */
     }
 
     .arrow-left, .arrow-right{
@@ -1158,10 +1221,6 @@ footer .made-by .logo{
     .ofert span{
         font-size: 48px;
         margin-bottom: 4%;
-    }
-
-    .photo-gallery{
-        flex-direction: row;
     }
 
     .card{
@@ -1220,6 +1279,11 @@ footer .made-by .logo{
     .about p:last-of-type{
         text-align: justify;
         font-size: 16px;
+    }
+
+    footer .row-top-left{
+        flex-direction: row;
+        align-items: flex-start;
     }
   }
 
@@ -1298,7 +1362,10 @@ footer .made-by .logo{
         font-size: 16px;
     }
 
-
+    footer .nav-list ul{
+        flex-direction: row;
+        justify-content: space-between;
+    }
   }
 
   @media(min-width: 1200px){
@@ -1319,6 +1386,11 @@ footer .made-by .logo{
     .section-left p{
         font-size: 16px;
         text-align: left;
+    }
+
+    footer .nav-mail{
+        flex-direction: row;
+        align-items: flex-start;
     }
   }
 

@@ -31,7 +31,6 @@ const sliderObj = {
         "Przykładowy tekst.",
         "test"
     ]
-
 }
 
 function search(){
@@ -69,7 +68,7 @@ function onClick(){
     showBtn.addEventListener("click", () => {
         realizationsGallery.classList.remove("realizations-hidden")
         root.style.setProperty("--pseudo-height", '0');
-        root.style.setProperty("--pseudo-display", 'none');
+        showBtn.style.display = "none"
     })
 
     imgCard.forEach(img => {
@@ -79,7 +78,7 @@ function onClick(){
     })
 }
 
-function slider(i, popupImg){
+function slider(i){
     introImg.src = sliderObj.sliderImgs[i]
     introHeader.innerText = sliderObj.sliderHeaders[i]
     introText.innerText = sliderObj.sliderTexts[i]
