@@ -27,14 +27,9 @@ button:active{
     -o-transform: translateY(3px);
 }
 
-.main-container{
-    max-width: 1920px;
-}
-
 /*Header and navigation CSS*/
 .navbar{
     padding-left: 5%;
-    margin-right: 5%;
 }
 
 .navbar-content{
