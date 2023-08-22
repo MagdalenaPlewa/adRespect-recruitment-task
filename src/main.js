@@ -31,7 +31,6 @@ const sliderObj = {
         "Przykładowy tekst.",
         "test"
     ]
-
 }
 
 function search(){
@@ -79,7 +78,7 @@ function onClick(){
     })
 }
 
-function slider(i, popupImg){
+function slider(i){
     introImg.src = sliderObj.sliderImgs[i]
     introHeader.innerText = sliderObj.sliderHeaders[i]
     introText.innerText = sliderObj.sliderTexts[i]
