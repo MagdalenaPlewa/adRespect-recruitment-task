@@ -773,7 +773,7 @@ footer .made-by .logo{
     }
 
     .section-title-container{
-        padding: 5%;
+        padding: 5% 5% 5% 5%;
     }
 
     .ofert h1{
@@ -1198,6 +1198,10 @@ footer .made-by .logo{
         height: 18px;
     }
 
+    .section-title-container{
+        padding: 5%;
+    }
+
     .ofert h1{
         font-size: 48px;
         margin-bottom: 4%;
@@ -1318,7 +1322,7 @@ footer .made-by .logo{
         transition: all 0.5s;
       }
 
-      .navbar .navbar-nav .nav-item:hover::after {
+    .navbar .navbar-nav .nav-item:hover::after {
         width: 80%;
       }
 
@@ -1341,6 +1345,10 @@ footer .made-by .logo{
 
     .intro-btn{
         padding-top: 5%;
+    }
+
+    .section-title-container{
+        padding: 8% 1% 5% 10%;
     }
 
     .about{
