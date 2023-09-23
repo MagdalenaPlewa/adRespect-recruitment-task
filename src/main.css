@@ -1,3 +1,11 @@
+:root{
+    --pseudo-height: 1000px;
+    }
+
+    .realizations-container::after{
+     height: var(--pseudo-height);
+    }
+
 *{
     padding: 0;
     margin: 0;
@@ -251,6 +259,10 @@ header{
     width: 48px;
 }
 
+.intro-arrow-left:hover, .intro-arrow-right:hover{
+    cursor: pointer;
+}
+
 /*Ofert section CSS*/
 .ofert{
     width: 100%;
@@ -330,6 +342,48 @@ header{
     -moz-border-radius: 28px;
     -ms-border-radius: 28px;
     -o-border-radius: 28px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.card:hover{
+
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    background-color: rgba(220, 193, 171, 0.25);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.card:hover > .card-body .card-body-link{
+    bottom: calc(15% - 8px);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: auto;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card:hover > .card-body .card-body-link a{
+    font-size: 24px;
+}
+
+.card:hover > .card-body .card-link-arrow{
+    bottom: calc(15% - 8px);
+    height: 22px;
+    width: 22px;
+}
+
+.card:hover > .card-body .card-img-top, .card:hover > .card-body p, .card:hover > .card-body h5{
+    opacity: 0.2;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
 }
 
 .card-body{
@@ -389,7 +443,6 @@ header{
 .about{
     width: 100%;
     height: 720px;
-    background-color: aqua;
 }
 
 .about-container{
@@ -400,7 +453,6 @@ header{
 
 .about-row{
     height: 100%;
-    /* background-color: rgba(148, 88, 40, 0.5); */
 }
 
 .about-left{
@@ -533,6 +585,10 @@ header{
     margin-bottom: 44px;
 }
 
+.photo-container img:hover{
+    cursor: pointer;
+}
+
 .realizations-container::after{
     content: "";
     position: absolute;
@@ -541,10 +597,9 @@ header{
     left: 0;
     right: 0;
     bottom: 0;
-    height: 1000px;
 }
 
-.realizations-btns{
+.show-btn{
     position: absolute;
     width: 150px;
     display: flex;
@@ -559,6 +614,58 @@ header{
     border: 1px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
 }
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-img{
+    max-width: 85%;
+    max-height: 85%;
+}
+
+.bi-x-square, .bi-arrow-left-square, .bi-arrow-right-square{
+    color: rgb(255,255,255);
+    font-size: 35px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.bi-x-square:hover, .bi-arrow-left-square:hover, .bi-arrow-right-square:hover{
+    cursor: pointer;
+}
+
+.bi-arrow-left-square{
+    position: absolute;
+    top: calc(50vh - 18px);
+    left: 10%;
+}
+
+.bi-arrow-right-square{
+    position: absolute;
+    top: calc(50vh - 18px);
+    right: 10%;
+}
+
 
 /*Contact section CSS*/
 .contact{
@@ -1037,6 +1144,10 @@ footer .logo{
         padding: 60px;
     }
 
+    .about{
+        height: auto;
+    }
+
     .about-container{
         height: auto;
     }
@@ -1211,6 +1322,16 @@ footer .logo{
 
     .card-img-top{
         height: 28px;
+    }
+
+    .card:hover > .card-body .card-body-link a{
+        font-size: 18px;
+    }
+
+    .card:hover > .card-body .card-link-arrow{
+        bottom: calc(15% - 8px);
+        height: 16px;
+        width: 16px;
     }
 
     .main-container h5{
