@@ -8,10 +8,25 @@ const root = document.querySelector(":root")
 const showBtn = document.querySelector(".show-btn")
 const realizationsContainer = document.querySelector(".realizations-container")
 const photoContainer = document.querySelector(".photo-container")
+const photos = document.querySelectorAll(".photo-container img")
+const photosArr = [...photos]
 const leftArrow = document.querySelector('.arrow-left-container')
 const rightArrow = document.querySelector(".arrow-right-container")
+const ofertContainer = document.querySelector(".ofert-title-container")
+const aboutImg = document.querySelector(".about-img img")
+const rowCards = document.querySelector(".row-cards")
+const cards = document.querySelectorAll(".col-card")
+const cardsArr = [...cards]
+const aboutContent = document.querySelector(".about-right-container")
 const imgCard = document.querySelectorAll(".photo-container img")
 const imgCardArr = [...imgCard]
+const contactContent = document.querySelector(".contact-content")
+const contactTitle = document.querySelector(".contact-title-content")
+const instagramBlock = document.querySelector(".instagram-block")
+
+
+
+console.log(photoContainer)
 
 const sliderObj = {
     sliderImgs: [
@@ -34,7 +49,6 @@ const sliderObj = {
     ]
 }
 
-console.log(imgCard, imgCardArr)
 
 const masonry = new Macy({
     container: '.photo-container',
@@ -161,6 +175,62 @@ function createItem(src, id){
             popupImg.setAttribute('src', `${imgCardArr[i].src}`)
             popupImg.setAttribute('dataset', imgCardArr[i].dataset.id )
     })
+}
+
+window.addEventListener("scroll", () => {
+    if(window.innerWidth > 800 &&  window.innerHeight > 600){
+        show();
+    }
+    else {
+        ofertContainer.classList.add("show-container")
+        cardsArr.forEach(card => {
+            card.classList.add("show-card")
+        });
+        aboutContent.classList.add("show-container")
+        aboutImg.classList.add("show-img")
+        photosArr.forEach(photo => {
+            photo.classList.add("show-img")
+        });
+        contactTitle.classList.add("show-container")
+        instagramBlock.classList.add("show-instagram")
+    }
+})
+
+
+
+let show = () => {
+    let rowCardsPosition = rowCards.offsetTop;
+    let aboutContentPosition = aboutContent.offsetTop;
+    let ofertContainerPosition = ofertContainer.offsetTop;
+    let photoContainerPosition = photoContainer.offsetTop;
+    let contanctContetnPosition = contactContent.offsetTop;
+
+    if(window.scrollY > ofertContainerPosition + 200){
+        ofertContainer.classList.add("show-container")
+    }
+
+    if(window.scrollY > rowCardsPosition + 200){
+        cardsArr.forEach(card => {
+            card.classList.add("show-card")
+        });
+    }
+
+    if(window.scrollY > aboutContentPosition - 600){
+            aboutContent.classList.add("show-container")
+            aboutImg.classList.add("show-img")
+    }
+
+    if(window.scrollY > photoContainerPosition + 1800){
+        console.log(photosArr)
+        photosArr.forEach(photo => {
+            photo.classList.add("show-img")
+        });
+
+    if(window.scrollY > contanctContetnPosition - 600){
+        contactTitle.classList.add("show-container")
+        instagramBlock.classList.add("show-instagram")
+    }
+}
 }
 
 search()
