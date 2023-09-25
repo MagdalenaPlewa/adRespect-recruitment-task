@@ -34,6 +34,14 @@ button{
     -o-border-radius: 200px;
 }
 
+button:active{
+    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+    -moz-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    -o-transform: translateY(3px);
+}
+
 .main-container{
     width: 1440px;
     display: flex;
@@ -280,6 +288,14 @@ header{
     height: 193px;
     width: 1040px;
     padding: 0;
+    position: relative;
+    left: -10%;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
 
 .ofert-title{
@@ -331,6 +347,13 @@ header{
     width: 378px;
     height: 370px;
     margin: 5px;
+    opacity: 0;
+    position: relative;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
 }
 
 .card{
@@ -349,15 +372,22 @@ header{
     -o-transition: all 0.2s;
 }
 
-.card:hover{
+.show-card{
+    width: 378px;
+    opacity: 1;
+    left: 0;
+    transform: rotateY('360');
+    -webkit-transform: rotateY('360');
+    -moz-transform: rotateY('360');
+    -ms-transform: rotateY('360');
+    -o-transform: rotateY('360');
+    -webkit-transform: rotateY(360deg);
+}
 
+.card:hover{
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
     background-color: rgba(220, 193, 171, 0.25);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
 }
 
 .card:hover > .card-body .card-body-link{
@@ -473,6 +503,19 @@ header{
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    opacity: 0;
+    position: relative;
+    right: -100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+img.show-img{
+    opacity: 1;
+    right: 0;
 }
 
 .about-right{
@@ -487,8 +530,21 @@ header{
     width: 596px;
     height: 450px;
     padding-left: 96px;
+    position: relative;
+    left: -10%;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.show-container{
+    opacity: 1;
+    left: 0;
 }
 
 .about-title{
@@ -583,6 +639,19 @@ header{
 .photo-container{
     margin-top: 96px;
     margin-bottom: 44px;
+}
+
+.photo-container img{
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+img.show-img{
+    opacity: 1;
 }
 
 .photo-container img:hover{
@@ -692,6 +761,14 @@ header{
 .contact-title-content{
     display: flex;
     align-items: end;
+    position: relative;
+    left: -10%;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
 }
 
 .contact-title-content h1{
@@ -718,6 +795,24 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    top: -100%;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.show-container{
+    opacity: 1;
+    left: 0;
+}
+
+.show-instagram{
+    top: 0;
+    opacity: 1;
 }
 
 .instagram-block button{
