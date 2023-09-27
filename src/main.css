@@ -1486,10 +1486,6 @@ footer .logo{
 }
 
 @media (max-width: 305px){
-    .intro-left{
-        /* height: 55vh; */
-    }
-
     .intro-title h1{
         font-size: 32px;
         line-height: 45px;
