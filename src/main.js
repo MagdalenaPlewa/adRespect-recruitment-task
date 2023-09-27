@@ -43,7 +43,7 @@ const sliderObj = {
     ],
     sliderTexts: [
         "Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.",
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         "Przykładowy tekst.",
         "test"
     ]
@@ -81,9 +81,20 @@ function hiddenSearchInput(){
 }
 
 function slider(i){
-    introImg.src = sliderObj.sliderImgs[i]
-    introHeader.innerText = sliderObj.sliderHeaders[i]
-    introText.innerText = sliderObj.sliderTexts[i]
+    function resolveAfter2Seconds(){
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(introImg.src= sliderObj.sliderImgs[i])
+            }, 250)
+        });
+    }
+
+      async function asyncCall() {
+        await resolveAfter2Seconds();
+        introHeader.innerText = sliderObj.sliderHeaders[i]
+        introText.innerText = sliderObj.sliderTexts[i]
+      }
+      asyncCall();
 }
 
 function onClick(){
@@ -221,7 +232,6 @@ let show = () => {
     }
 
     if(window.scrollY > photoContainerPosition + 1800){
-        console.log(photosArr)
         photosArr.forEach(photo => {
             photo.classList.add("show-img")
         });

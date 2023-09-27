@@ -1014,16 +1014,16 @@ footer .logo{
     }
 
     .intro-paragraph{
-        margin-top: 20px;
-        height: auto;
+        margin-top: 10px;
     }
 
     .intro-paragraph p{
         width: auto;
+        font-size: 16px;
     }
 
     .intro-btns{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .intro-btns button{
@@ -1140,15 +1140,12 @@ footer .logo{
 
     .intro-container{
         margin-left: 0;
-        height: auto;
+        height: calc(100vh - 72px);
     }
 
     .intro-left-content{
         padding: 0 56px;
-    }
-
-    .intro-title{
-        height: auto;
+        height: 50vh;
     }
 
     .intro{
@@ -1157,7 +1154,7 @@ footer .logo{
 
     .intro-left{
         width: 80%;
-        height: auto;
+        height: 50vh;
     }
 
     .intro-left-content{
@@ -1168,7 +1165,7 @@ footer .logo{
 
     .intro-right{
         width: 100%;
-        min-height: 500px;
+        min-height: 50vh;
     }
 
     .intro-btns{
@@ -1318,7 +1315,35 @@ footer .logo{
 
 }
 
+@media(max-width: 579px){
+    .intro-left{
+        height: 55vh;
+    }
+}
+
 @media (max-width: 565px){
+    .intro-left{
+        height: 55vh;
+    }
+
+    .intro-left-content{
+        padding: 10px;
+    }
+
+    .intro-title{
+        height: 180px;
+    }
+
+    .intro-title h1{
+        line-height: 60px;
+    }
+
+    .intro-paragraph p{
+        font-size: 14px;
+    }
+
+   
+
     .contact-container{
         padding: 0;
     }
@@ -1387,21 +1412,18 @@ footer .logo{
         margin: 0 10px;
     }
 
-    .intro-left-content{
-        padding: 10px;
+    .intro-left{
+        height: 55vh;
     }
 
-    .intro-title{
-        height: auto;
-    }
-
-    .intro-title h1{
-        line-height: 60px;
+    .intro-btns{
+        margin-top: 0;
     }
 
     .ofert-title-container, .about-right-container{
         padding: 20px;
     }
+
     .main-container p:last-child{
         font-size: 12px;
     }
@@ -1460,6 +1482,17 @@ footer .logo{
     .footer-nav{
         height: auto;
         margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 305px){
+    .intro-title h1{
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .intro-paragraph{
+        margin-top: 10px;
     }
 }
 
